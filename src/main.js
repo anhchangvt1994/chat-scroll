@@ -1,8 +1,11 @@
-import Vue from 'vue'
-import App from './App.vue'
+import ChatScroll from './components/chat-scroll';
 
-Vue.config.productionTip = false
+const Main = (() => {
+  return {
+    init() {
+      ChatScroll.init();
+    },
+  };
+})();
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+Main.init()
